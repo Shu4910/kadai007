@@ -30,7 +30,7 @@ if ($status === false) {
     //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
     while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
       $view .= '<p>';
-      $view .=  h($result['date']) . ' : ' . h($result['name']) . ' | '. h($result['content']) . ' | ' . h($result['email']). ' | <input type="password" class="password" value="' . h($result['pass']) . '" readonly>';
+      $view .=  h($result['id']) . ' : ' . h($result['name']) . ' | '. h($result['content']) . ' | ' . h($result['email']). ' | <input type="password" class="password" value="' . h($result['pass']) . '" readonly>';
       $view .= '</p>';
     }
 }
